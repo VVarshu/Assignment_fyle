@@ -1,0 +1,44 @@
+.what-we-do {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .carousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 500px; /* Adjust this height as necessary */
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+  
+  .carousel-indicators li {
+    background-color: #000;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #fff;
+  }
+  
+  /* Hover effect */
+  .slider-img {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .slider-img:hover {
+    transform: scale(1.1);
+  }
+  body{
+    background-color: #faa9a9;
+  }
+  a{
+    margin-left: 200px;
+    font-size: 200%;
+    color: #f8f8f8;
+  }
+   

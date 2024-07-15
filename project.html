@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Project Section</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3a0a3b;
+    }
+    .project-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0;
+    }
+    .project-content {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+    }
+    .project-image {
+      flex: 1;
+      
+    }
+    .project-image img {
+      width: 95%;
+      height: auto;
+      border-radius: 10px;
+     
+    }
+    .project-details {
+      flex: 1;
+      
+    }
+    .project-details h2 {
+      color: #f140a1;
+      
+      font-size: 280%;
+      margin-left: 100px;
+    }
+    .project-details .content {
+      margin-bottom: 20px;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+      color: rgb(209, 132, 132);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .content-1 {
+      background-color: #ff9999; /* Light Red */
+    }
+    .content-2 {
+      background-color: #215d99; /* Light Blue */
+    }
+    .content-3 {
+      background-color: #3a0a3b; /* Light Green */
+    }
+    .project-details .content.active {
+      border: 1px solid #e058da;
+    }
+    .project-details .content:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+    
+    }
+  </style>
+</head>
+<body>
+
+<section class="project-section">
+  <div class="project-content">
+    <div class="project-image">
+      <img id="project-image" src="image5.jpeg" alt="Project Image">
+    </div>
+    <div class="project-details">
+      <h2>OUR PROJECT</h2>
+      <div class="content" data-image="https://th.bing.com/th/id/R.d0af040188cbaf8084e2f8b25c638cd1?rik=NoZb3ar%2ftnSOgQ&pid=ImgRaw&r=0">
+        <h3>Genderless Kei - Japan's Hot Trend</h3>
+        <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of great features.</p>
+      </div>
+      <div class="content" data-image="https://th.bing.com/th/id/OIP.-NLXKlF5miJgvqffcvUE6AHaE8?w=2560&h=1707&rs=1&pid=ImgDetMain">
+        <h3>Better Strategy & Quality</h3>
+        <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of great features.</p>
+      </div>
+      <div class="content" data-image="https://th.bing.com/th/id/OIP.PL_Gd-B6yfMLPav790gl_gHaE7?rs=1&pid=ImgDetMain">
+        <h3>Genderless Kei - Japan's Hot Trend</h3>
+        <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of great features.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.content').click(function() {
+      // Remove active class from all contents
+      $('.content').removeClass('active');
+      // Add active class to the clicked content
+      $(this).addClass('active');
+      // Change the image
+      var newImage = $(this).data('image');
+      $('#project-image').attr('src', newImage);
+    });
+  });
+</script>
+
+</body>
+</html>
